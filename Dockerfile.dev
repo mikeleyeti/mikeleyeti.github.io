@@ -11,6 +11,7 @@ RUN bundle config --global frozen 1
 WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock jekyll-text-theme.gemspec ./
+RUN gem install bundler -v 2.4.19
 RUN bundle install
 
 EXPOSE 4000
